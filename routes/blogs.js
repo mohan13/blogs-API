@@ -4,6 +4,8 @@ const multer = require("multer");
 let router = express.Router();
 
 router.get("/", BlogsController.getBlogs);
+router.get("/:id", BlogsController.getSingleBlog);
+
 
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {

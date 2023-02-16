@@ -11,6 +11,19 @@ module.exports.getBlogs = async (req, res) => {
   }
 };
 
+module.exports.getSingleBlog = async (req, res) => {
+  console.log(req.params);
+  try {
+    let data = await BlogsModel.findById(req.params.id);
+    res.status(200).json({
+      message: "all the records",
+      data,
+    });
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+};
+
 module.exports.BlogsPost = async (req, res) => {
   console.log(req.body, req.files, req.file);
   try {
