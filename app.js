@@ -36,7 +36,7 @@ app.use("/doc", swaggerUiExpress.serve, swaggerUiExpress.setup(swaggerDocs));
 
 //Home
 app.use("/home", (req, res) => {
-  res.status(200).json([
+  res.status(200).json(
     {
       banner: [
         {
@@ -47,9 +47,17 @@ app.use("/home", (req, res) => {
           title: "FRESH FLOWER & GIFT SHOP",
           headline: "Making beautiful flowers a part of your life",
         },
+        {
+          title: "FRESH FLOWER & GIFT SHOP",
+          headline: "Making beautiful flowers a part of your life",
+        },
+        {
+          title: "FRESH FLOWER & GIFT SHOP",
+          headline: "Making beautiful flowers a part of your life",
+        },
       ],
     },
-  ]);
+  );
 });
 
 const blogs = require("./routes/blogs");
