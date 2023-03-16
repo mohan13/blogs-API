@@ -39,7 +39,7 @@ module.exports.getDeleteBlog = async (req, res) => {
 };
 
 module.exports.getUpdateBlog = async (req, res) => {
-  console.log(req.params, req.body,req.file,"lkl");
+  console.log(req.params, req.body,req.file,"update req");
   try {
     let data = await BlogsModel.findByIdAndUpdate(req.params.id, {
       time: req.body.time,

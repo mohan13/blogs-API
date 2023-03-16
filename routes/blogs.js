@@ -19,8 +19,8 @@ const storage = multer.diskStorage({
 });
 
 const upload = multer({ storage: storage });
-router.patch("/:id", upload.single("image"), BlogsController.getUpdateBlog);
+router.patch("/:id", upload.single("images"), BlogsController.getUpdateBlog);
 
-router.post("/", upload.single("image"), BlogsController.BlogsPost);
+router.post("/", upload.single("images"), BlogsController.BlogsPost);
 
 module.exports = router;
